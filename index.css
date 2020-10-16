@@ -1,0 +1,82 @@
+body {
+    background-color: rgb(55, 13, 94);
+}
+
+.logo {
+    margin-top: 200px;
+    margin-left: 200px;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(51, 80, 70);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangle-one {
+    width: 0;
+    height: 0;
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+    border-bottom: 100px solid red;
+    transition-duration: 2s;
+    border-radius: 20%;
+    animation: color_change 1s infinite alternate;
+    transition-timing-function: ease-in-out;
+}
+
+.triangle-one:before {
+    content: "";
+    display: block;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+    border-bottom: 100px solid rgb(51, 80, 70);
+    transform: scale(0.8) translateX(-62px) translateY(5px);
+    transition-duration: 2s;
+    border-radius: 20%;
+    margin-right: -25px;
+}
+
+.triangle-one:after {
+    position: absolute;
+    content: "";
+}
+
+@keyframes color_change {
+    from {
+        border-bottom: 100px solid #eb0101;
+    }
+    10% {
+        border-bottom: 100px solid #eb4301;
+    }
+    20% {
+        border-bottom: 100px solid #ebc001;
+    }
+    30% {
+        border-bottom: 100px solid #72eb01;
+    }
+    40% {
+        border-bottom: 100px solid #01eb91;
+    }
+    50% {
+        border-bottom: 100px solid #01b4eb;
+    }
+    60% {
+        border-bottom: 100px solid #1101eb;
+    }
+    70% {
+        border-bottom: 100px solid #b401eb;
+    }
+    80% {
+        border-bottom: 100px solid #eb0176;
+    }
+    90% {
+        border-bottom: 100px solid #eb0176;
+    }
+    to {
+        border-bottom: 100px solid #310000;
+    }
+}
